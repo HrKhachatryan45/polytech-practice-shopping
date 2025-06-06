@@ -257,6 +257,7 @@ const isAdded = (id) => {
     return cart.some(item => item.id === id); // u stugum te ka mer apranqy dra mej te che
 }
 
+//bayc ay bany hashvi chei are filter anelu pahy eti pti spasenq html@ ylni vor dra vra havqenq esi popoxenq
 
 const getProducts = () => {
     const productsContainer = document.getElementById('products');
