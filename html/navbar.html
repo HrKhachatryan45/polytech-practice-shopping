@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
@@ -12,7 +13,8 @@
   margin: 0;
   font-family: Arial, sans-serif;
 }
-    ul.navbar { list-style-type: none;
+    ul.navbar {
+       list-style-type: none;
         background-color: #A86868;
   display: flex;
   align-items: center;
@@ -80,8 +82,10 @@ input[type="text"] {
 
 }
 .all {
+  width: 100%;
     display: flex;
     background-color: #A86868;
+    align-items: center;
     justify-content: space-between;
     padding: 0 50px;
     box-sizing: border-box;
@@ -93,6 +97,10 @@ h2 {
   font-style: normal;
   margin-left: 7px;
 }
+#activeLink{
+    text-decoration: underline;
+  color: dimgray;
+}
 </style>
 <body>
   <div class="all"> 
@@ -100,13 +108,14 @@ h2 {
     <h2>WILDEMU</h2></div>
     <ul class="navbar">
     <li>
-        <a href="home.html" class="link">Home</a></li>
-    <li><a href="products.html" class="link">Products</a></li>
+        <a  href="home.html" class="link">Home</a></li>
+    <li><a  href="products.html" class="link">Products</a></li>
     <li> <input type="text" placeholder="Search..."></li>
-      <li><a href="cart.html" class="cart-btn">Cart <img src="../images/cart-icon.png" alt="Cart Icon" />
+      <li><a  href="cart.html" class="link cart-btn">Cart <i class="fa-solid fa-cart-shopping"></i>
       </a></li>
 
     </ul>
     </div>
+  
 </body>
 </html>
