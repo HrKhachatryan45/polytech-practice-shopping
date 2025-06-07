@@ -1,0 +1,82 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+    }
+
+	    .ban {
+      background: #bce0e6;
+      text-align: center;
+      padding: 60px 20px;
+	  background-image: url('../images/Online-Shopping.-1.png') ;width: 100%;
+	  background-repeat: no-repeat;
+	 
+	 
+    }
+
+    .ban h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+	  color: aliceblue;
+    }
+
+    .ban button {
+      padding: 10px 20px;
+      background: #f08080;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .sponsors, .brands {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .sponsors img, .brands img {
+      height: 200px;
+	  width: auto;
+    }
+	
+    .brands img {
+      border-radius: 10px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: #dba8a8;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .footer-section p {
+      margin: 5px 0;
+    }
+	h3.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 24px;
+  }
