@@ -5,8 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    Navbar
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+    ul.navbar { list-style-type: none;
+        background-color: #A86868;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  color: white;
+  width: 50%;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
     
+        
+    
+    .link {
+         color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+    }
+    .link:hover {
+  text-decoration: underline;
+  color: dimgray;
+}
+.cart-btn {
+  background: none;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+.imgName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart {
+        width: 40px;
+        height: 40px;
+  }
+  .cart-btn {
+  background: none;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cart-btn:hover{color: dimgray;
+    text-decoration: underline;
+
+}
+.cart-btn img {
+  height: 20px;
+
+}
+.all {
+    display: flex;
+    background-color: #A86868;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+h2 {
+  color : white;
+  font-family: "Julee", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 7px;
+}
+</style>
+<body>
+  <div class="all"> 
+    <div class="imgName"><img src="../images/cart.png" alt="" class="cart">
+    <h2>WILDEMU</h2></div>
+    <ul class="navbar">
+    <li>
+        <a href="home.html" class="link">Home</a></li>
+    <li><a href="products.html" class="link">Products</a></li>
+    <li> <input type="text" placeholder="Search..."></li>
+      <li><a href="cart.html" class="cart-btn">Cart <img src="../images/cart-icon.png" alt="Cart Icon" />
+      </a></li>
+
+    </ul>
+    </div>
 </body>
 </html>
