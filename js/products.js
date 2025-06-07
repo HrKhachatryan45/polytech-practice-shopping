@@ -177,3 +177,6 @@ const renderPagination = (totalItems) => {
     paginationContainer.appendChild(btn2);
 };
 
+
+
+    
