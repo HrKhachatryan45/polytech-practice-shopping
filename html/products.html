@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <include src="navbar.html"></include>
+  <section class="products-section">
+    <h2 class="section-title">OUR PRODUCTS</h2>
+
+    <div class="product-layout">
+      <!-- Sidebar Filter -->
+      <aside class="filter-sidebar">
+        <input type="text" oninput="handleSearch(this.value)" placeholder="Search for products..." class="search-box" />
+
+        <div class="filter-group">
+          <h4>CATEGORIES</h4>
+          <ul>
+            <li onclick="handleChooseCategory('All')" class="categoryLi" id="active">All</li>
+            <li onclick="handleChooseCategory('Shoes')" class="categoryLi">Shoes</li>
+            <li onclick="handleChooseCategory('Clothes')" class="categoryLi">Clothes</li>
+            <li onclick="handleChooseCategory('Glasses')" class="categoryLi">Glasses</li>
+            <li onclick="handleChooseCategory('Purses')" class="categoryLi">Purses</li>
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <h4>COLORS</h4>
+          <ul class="color-list">
+            <li class="colorLi" onclick="handleChooseColor('all')" id="activeColor"><img src="../images/all.png" class="all-image"/>All</li>
+            <li class="colorLi" onclick="handleChooseColor('green')"><span class="color-circle" style="background: green;" ></span> Green</li>
+            <li class="colorLi" onclick="handleChooseColor('red')"><span class="color-circle" style="background: red;" ></span> Red</li>
+            <li class="colorLi" onclick="handleChooseColor('yellow')"><span class="color-circle" style="background: yellow;" ></span> Yellow</li>
+            <li class="colorLi" onclick="handleChooseColor('black')"><span class="color-circle" style="background: black;" ></span> Black</li>
+            <li class="colorLi" onclick="handleChooseColor('white')"><span class="color-circle" style="background: white;"  ></span> White</li>
+            <li class="colorLi" onclick="handleChooseColor('purple')"><span class="color-circle" style="background: purple;" ></span> Purple</li>
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <h4>AVAILABILITY</h4>
+          <ul>
+            <li class="avaLi" onclick="handleChooseAva('all')" id="activeColor"><img src="../images/all.png" class="all-image"/> All</li>
+            <li class="avaLi" onclick="handleChooseAva('in stock')"><span class="color-circle" style="background: green;" ></span> In Stock</li>
+            <li class="avaLi" onclick="handleChooseAva('out of stock')"><span class="color-circle" style="background: red;" ></span> Out Of Stock</li>
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <h4>PRICE</h4>
+          <div class="price-inputs">
+            <input type="number" onchange="handleChangePrice('from',this.value)" placeholder="From" required />
+            <input type="number" onchange="handleChangePrice('to',this.value)" placeholder="To" required />
+          </div>
+        </div>
+          <button onclick="filterProducts()">Filter Products </button>
+
+      </aside>
+
+      <!-- Products Grid -->
+      <div class="right-column">
+        <div id="products" ></div>
+
+        <div id="pagination"></div>
+      </div>
+    </div>
+  </section>
+  <include src="footer.html"></include>
+<script src="../js/products.js"></script>
+<script src="https://unpkg.com/htmlincludejs"></script>
+</body>
+</html>
