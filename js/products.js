@@ -58,7 +58,7 @@ const data = await response.json()
 const getProducts =async () => {
     const productsContainer = document.getElementById('products');
     productsContainer.innerHTML = ''; 
-    const filteredData =await applyFilters()
+    const filteredData = await applyFilters()
 
     const paginatedData = paginate(filteredData,pageSize,currentPage)
     
@@ -146,10 +146,11 @@ const renderPagination = (totalItems) => {
            if (currentPage === 1) {
             btn.setAttribute('disabled',true)
       }
-    btn.textContent = '<';
+    btn.innerHTML = '<i class="fa-solid fa-angle-left"></i>';
     btn.addEventListener('click', () => {
       currentPage -= 1;
       getProducts(); // re-render products
+      window.scrollTo(0,0)
     });
     paginationContainer.appendChild(btn);
     
@@ -162,21 +163,44 @@ const renderPagination = (totalItems) => {
     btn.addEventListener('click', () => {
       currentPage = i;
       getProducts(); // re-render products
+      window.scrollTo(0,0)
     });
     paginationContainer.appendChild(btn);
   }
-         const btn2 = document.createElement('button');
-         if (currentPage === totalPages) {
-            btn2.setAttribute('disabled',true)
-         }
-    btn2.textContent = '>';
+   const btn2 = document.createElement('button');
+   if (currentPage === totalPages) {
+       btn2.setAttribute('disabled',true)
+    }
+    btn2.innerHTML = '<i class="fa-solid fa-angle-right"></i>';
     btn2.addEventListener('click', () => {
       currentPage += 1;
       getProducts(); // re-render products
+      window.scrollTo(0,0)
     });
     paginationContainer.appendChild(btn2);
+        const pageNumbersContainer = document.getElementById('pageNumber')
+
+    pageNumbersContainer.innerText = ''
+    pageNumbersContainer.innerText = currentPage + ' of ' + totalPages
 };
 
+window.addEventListener('load',() => {
+  const num = JSON.parse(localStorage.getItem('one'))
+    const url = new URL(window.location)
+    const query = url.searchParams.get('searchQuery')
+  if (!num && query) {
 
+    filterObject.searchQuery = query
+    localStorage.setItem('one',JSON.stringify({name:"mario"}))
+    document.getElementsByClassName('search-box')[0].value = query
+    getProducts()
+     url.searchParams.delete('searchQuery');
+    window.history.replaceState({}, '', url.pathname);
+  }else{
+    localStorage.removeItem('one')
+    document.getElementsByClassName('search-box')[0].value = ''
+    getProducts()
+  }
+ 
+})
 
-    

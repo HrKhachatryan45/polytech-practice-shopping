@@ -8,3 +8,9 @@ window.addEventListener('load', () => {
     }
   });
 });
+
+const handleQuerySearch = (event) => {
+  event.preventDefault()
+  const value = document.getElementById('someID').value
+    window.location.href = 'products.html?searchQuery=' + value
+}    

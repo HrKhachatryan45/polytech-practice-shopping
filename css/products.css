@@ -1,3 +1,13 @@
+html{
+  scroll-behavior: smooth;
+}
+.products-section{
+  width: 100%;
+  height: fit-content;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
 .product-layout {
   display: flex;
   gap: 2rem;
@@ -5,38 +15,50 @@
 
 /* Sidebar */
 .filter-sidebar {
-  width: 220px;
-  background-color: #ffe4ea;
-  padding: 1rem;
+  width: 20%;
+  background-color: #FFD0D0;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  height: fit-content;
   border-radius: 8px;
   font-size: 0.9rem;
 }
 
 .filter-sidebar h4 {
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
   font-size: 1rem;
 }
 
 .search-box {
   width: 100%;
-  padding: 6px;
-  margin-bottom: 1rem;
+  height: 28px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.search-box::placeholder{
+  font-size:13px;
+
+
 }
 
 .filter-group ul {
   list-style: none;
   padding: 0;
+  width: 100%;
   margin: 0;
 }
 
 .filter-group ul li {
   margin: 4px 0;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
 }
 
 /* Color dots */
@@ -61,7 +83,63 @@
 
 /* Right column (products) */
 .right-column {
-  flex: 1;
+  width:78% ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+#products{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  row-gap: 20px;
+
+}
+
+.product button{
+  width: 100%;
+  height: 35px;
+  border: 0;
+  background-color: #FFD0D0;
+  border-radius: 7px;
+  cursor: pointer;
+  color: white;
+     font-family: "Itim", cursive;
+        font-weight: 700;
+        font-style: normal;
+}
+
+.added{
+  background-color: rgb(243, 37, 37)!important;
+}
+
+.product img{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+.product section{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product{
+  width: auto;
+  height:fit-content;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.product h2{
+  font-size: 16px;
 }
 #active{
     color: green;
@@ -74,4 +152,55 @@
 }
 #activeColor span,#activeColor img{
     outline: 2px solid gray;
+}
+
+#someButton{
+  width: 60%;
+  height: 30px;
+  background-color: #F5C6AA;
+  color: black;
+  border-radius: 5px;
+  border: 0;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: "Itim", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+#pagination{
+  margin-top: 30px;
+}
+#pagination button{
+  width: 35px;
+  height: 35px;
+  background-color: #F5C6AA;
+  border: 0;
+  border-radius: 3px;
+  margin-right: 5px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+#pagination button[disabled = true]{
+  background-color: #b3afad;
+  cursor: not-allowed;
+}
+
+.activeBtn{
+  background-color: aqua!important;
+}
+
+#thisContainer{
+  width: 100%;
+display: flex;
+align-items: center;
+justify-content: start;
+}
+
+#pageNumber{
+  font-family: "Itim", cursive;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  margin-left: 130px;
 }

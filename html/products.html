@@ -9,7 +9,11 @@
 <body>
     <include src="navbar.html"></include>
   <section class="products-section">
-    <h2 class="section-title">OUR PRODUCTS</h2>
+        <section id="thisContainer">
+            <h2 class="section-title">OUR PRODUCTS</h2>
+            <h2 id="pageNumber"></h2>
+        </section>
+
 
     <div class="product-layout">
       <!-- Sidebar Filter -->
@@ -56,7 +60,7 @@
             <input type="number" onchange="handleChangePrice('to',this.value)" placeholder="To" required />
           </div>
         </div>
-          <button onclick="filterProducts()">Filter Products </button>
+          <button onclick="filterProducts()" id="someButton">Filter Products </button>
 
       </aside>
 
