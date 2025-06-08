@@ -1,10 +1,19 @@
 
-* {
-    box-sizing: border-box;
+body {
     margin: 0;
-    padding: 0;
+    padding: 0!important;
 }
 
+.cartAll{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: fit-content;
+    min-height:57vh;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
 
 
 h1 {
@@ -14,14 +23,21 @@ h1 {
 }
 
 #cart {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 800px;
     margin: auto;
 }
 
-.cart-item {    display: flex;  align-items: center;  background-color:white;   padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.cart-item {   
+     display: flex;
+     justify-content: space-between;
+       align-items: center;
+         background-color:white; 
+           padding: 15px; border-radius: 10px; 
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cart-item:hover {
@@ -36,9 +52,7 @@ h1 {
     margin-right: 20px;
 }
 
-.cart-item section {
-    flex: 1;
-}
+
 
 .cart-item section h1 {
      margin-bottom: 5px;
@@ -50,12 +64,22 @@ h1 {
     color: #555;
 }
 
-.cart-item section span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-right: 8px;
+#hello{
+    display: flex;
+}
+#hello section{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
 }
 #removeIcon {
     color: #f08080;
@@ -99,9 +123,26 @@ h1 {
 
 .cart-item div h1 {
     margin-left: 15px;
-    color: #27ae60;
 }
 body {
     background-color: white;
     padding: 20px;
+}
+#mos{
+     font-family: "Itim", cursive;
+        font-weight: 700;
+        font-style: normal;
+}
+#pay{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #f08080;
+    border: 0;
+    color: white;
+     font-family: "Itim", cursive;
+        font-weight: 700;
+        font-style: normal;
 }

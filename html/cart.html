@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="../css/cart.css">
+  <link rel="icon" href="../images/cart.png">
+
 </head>
 <body>
     <include src="navbar.html"></include>
 
   <section class="cartAll">
-      <h1>My Cart</h1>
+      <h1  id="mos">My Cart</h1>
     <div id="cart"></div>
   </section>
+  <div style="width: 100%; margin-top: 30px; display: flex; align-items: center; justify-content: end; padding: 0 50px; box-sizing: border-box;">
+    <button id="pay">PAY FOR GOODS</button>
+  </div>
 
     
     <include src="footer.html"></include>

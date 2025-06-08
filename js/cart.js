@@ -10,11 +10,13 @@ const getCartElements = () => {
 
         const div =  document.createElement('div')
         div.className = 'cart-item'
-        div.innerHTML = `<img src='../${element.image}' />
-        <section>
-            <h1>${element.title}</h1>
-            <h3><span class='${element.color}'></span>${element.color}</h3>
-        </section>
+        div.innerHTML = `<div id='hello'>
+            <img src='../${element.image}' />
+            <section>
+                <h1>${element.title}</h1>
+                <h3><span class='${element.color}'></span>${element.color}</h3>
+            </section>
+        </div>
         <div>
         <i id='removeIcon' onclick='handleRemoveItem(${element.id})' class="fa-solid fa-trash-can"></i>
           <section>
