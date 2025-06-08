@@ -10,7 +10,7 @@ const getCartElements = () => {
 
         const div =  document.createElement('div')
         div.className = 'cart-item'
-        div.innerHTML = `<div id='hello '>
+        div.innerHTML = `<div id='hello'>
             <img src='../${element.image}' />
             <section>
                 <h1>${element.title}</h1>
