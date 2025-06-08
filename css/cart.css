@@ -1,20 +1,115 @@
-.cartAll{
-    width: 100%;
-    height: fit-content;
-    padding: 20px 30px ;
+
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.cartAll h1{
-    font-family: "Itim", cursive;
-    font-weight: 700;
-    font-style: normal;
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
-.cart-item{
-    width: 100%;
-    height: 300px;
-    border: 1px solid red;
-    margin-bottom: 10px;
+
+#cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.cart-item {    display: flex;  align-items: center;  background-color:white;   padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #ccc;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item img {
+    width: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.cart-item section {
+    flex: 1;
+}
+
+.cart-item section h1 {
+     margin-bottom: 5px;
+}
+
+.cart-item section h3 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    color: #555;
+}
+
+.cart-item section span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+#removeIcon {
+    color: #f08080;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#removeIcon:hover {
+    color: red;
+    transform: rotate(-10deg);
+}
+
+.cart-item div section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-item div section button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item div section button:hover {
+    background-color: #2980b9;
+}
+
+.cart-item div section input[type="number"] {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.cart-item div h1 {
+    margin-left: 15px;
+    color: #27ae60;
+}
+body {
+    background-color: white;
+    padding: 20px;
 }
