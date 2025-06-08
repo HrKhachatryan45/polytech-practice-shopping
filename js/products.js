@@ -13,6 +13,18 @@ const handleAddItem = (product) => {
     cart.push(product) 
     localStorage.setItem('cart', JSON.stringify(cart));
     window.dispatchEvent(new Event('cart-updated')); // new thing i didnt know
+
+    // logic for qanak ban
+    //  const exists = cart.find((item) => item.id === product.id)
+    // if (!exists) {
+    //   cart.push({...product,qunatity:1}) 
+    // localStorage.setItem('cart', JSON.stringify(cart));
+    // window.dispatchEvent(new Event('cart-updated')); // new thing i didnt know
+    // }else{
+    //  let newCart = cart.map((prev) => prev.id === product.id ? {...prev,qunatity:prev.qunatity + 1} : prev)
+    //      localStorage.setItem('cart', JSON.stringify(newCart));
+    // window.dispatchEvent(new Event('cart-updated')); // new thing i didnt know
+    // }
 }
 
 const isAdded = (id) => {
