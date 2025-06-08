@@ -98,8 +98,21 @@
   margin-left: 7px;
 }
 #activeLink{
-    text-decoration: underline;
+  text-decoration: underline;
   color: dimgray;
+}
+.quantity{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: red;
+  position: absolute;
+  top: -10px;
+  right: 0px;
 }
 </style>
 <body>
@@ -115,12 +128,12 @@
          <input type="text" id="someID" placeholder="Search...">
       </form>
     </li>
-      <li><a  href="cart.html" class="link cart-btn">Cart <i class="fa-solid fa-cart-shopping"></i>
+      <li style="position: relative;"><a  href="cart.html" class="link cart-btn">Cart <i class="fa-solid fa-cart-shopping"></i>
+        <section class="quantity"></section>
       </a></li>
 
     </ul>
     </div>
-
 
 </body>
 </html>
